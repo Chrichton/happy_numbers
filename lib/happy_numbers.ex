@@ -3,6 +3,13 @@ defmodule HappyNumbers do
   https://ccd-school.de/en/coding-dojo/function-katas/happy-numbers/
   """
 
+  def happy_numbers(range) do
+    range
+    |> Task.async_stream(&happy_number?/1)
+    |> Stream.filter(fn {:ok, result} -> result end)
+    |> Enum.count()
+  end
+
   def happy_number?(1), do: true
 
   def happy_number?(number)

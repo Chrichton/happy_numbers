@@ -11,4 +11,8 @@ defmodule HappyNumbersTest do
     refute HappyNumbers.happy_number?(11)
     refute HappyNumbers.happy_number?(20)
   end
+
+  test "happy_numbers" do
+    assert HappyNumbers.happy_numbers(10..20) == 2
+  end
 end
