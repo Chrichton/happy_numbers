@@ -27,6 +27,6 @@ defmodule HappyNumbers do
       do: happy_number?(sum)
 
   def happy_number?([first | rest], sum) do
-    happy_number?(rest, sum + first)
+    happy_number?(rest, sum + first * first)
   end
 end

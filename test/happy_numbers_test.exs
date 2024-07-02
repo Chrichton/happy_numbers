@@ -5,6 +5,7 @@ defmodule HappyNumbersTest do
   test "happy_number" do
     assert HappyNumbers.happy_number?(1)
     assert HappyNumbers.happy_number?(10)
+    assert HappyNumbers.happy_number?(13)
     assert HappyNumbers.happy_number?(19)
 
     refute HappyNumbers.happy_number?(0)
@@ -13,6 +14,6 @@ defmodule HappyNumbersTest do
   end
 
   test "happy_numbers" do
-    assert HappyNumbers.happy_numbers(10..20) == 2
+    assert HappyNumbers.happy_numbers(10..20) == 3
   end
 end
